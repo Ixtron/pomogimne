@@ -1,4 +1,5 @@
-class C:
-    pass
-instance_c = C()
-print(type(instance_c))
+from tkinter import*
+root=Tk()
+myLabel=Label(root, text="Hello World!")
+myLabel.pack()
+root.mainloop()

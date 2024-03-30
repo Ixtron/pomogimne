@@ -1,19 +1,6 @@
-class Dog:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def sit(self):
-        print(f"{self.name} сел")
-
-    def roll_over(self):
-        print(f"{self.name} перекатывается")
-
-
-my_dog = Dog("Ромка", 3)
-my_dog.sit()
-my_dog.roll_over()
-
-my_dog = Dog("Димка", 6)
-my_dog.sit()
-my_dog.roll_over()
+from tkinter import*
+root=Tk()
+myLabel1=Label(root, text="Hello World!").grid(row=0, column=0)
+myLabel2=Label(root, text="Меня зовут Dudarev Kirill")
+myLabel2.grid(row=1, column=5)
+root.mainloop()
