@@ -1,6 +1,13 @@
-mass = [7.713, 0.208, 6.336, 7.488, 4.985, 2.248, 1.981, 7.605, 1.691,
-        0.883, 6.854, 9.534, 0.039, 5.122, 8.126, 6.125, 7.218, 2.919,
-        9.178, 7.146, 5.425, 1.422, 3.733, 6.741, 4.418]
-max_intensity = max(mass[:10])
-max_index = mass.index(max_intensity)
-print(max_index)
+import numpy as np
+
+def closest(atoms, v, g):
+    v_coords = atoms[v]
+    distances = np.linalg.norm(atoms - v_coords, axis=1)
+    count = np.sum(distances < g)
+    return count
+#
+atoms = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+v = 0
+g = 5
+result = closest(atoms, v, g)
+print(result)
